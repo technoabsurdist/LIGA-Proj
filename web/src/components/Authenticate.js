@@ -5,9 +5,9 @@ import axios from "axios";
 
 const Auth = ({ authenticate }) => {
   const [pwInput, setInput] = useState("");
-  const [nameInput, setNameInput] = useState("");
-  const [emailInput, setEmailInput] = useState("");
-  const [entityInput, setEntityInput] = useState("");
+  const [nameInput ] = useState("");
+  const [emailInput ] = useState("");
+  const [entityInput ] = useState("");
 
   const [message, setMessage] = useState("Enter your password below");
 

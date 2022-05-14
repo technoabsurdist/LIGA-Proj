@@ -9,7 +9,8 @@ Create an extremely easy tool to create a resume book that showcases every RSO's
 Imagine a future where the recently established UChicago space RSO can connect with spaceX, NASA, and Varda recruiters with a compiled version of their available talent, or the newly created BioTech group could access employers from Ginko Bioworks, Medical research labs around the world, and justly showcase UChicago worthy talent. LIGA is the way to do _this_ and much more. 
 
 ## Deploy Status Badge
-[![Netlify Status](https://api.netlify.com/api/v1/badges/f8baad2b-0bdd-4037-b9bd-047858838dc6/deploy-status)](https://app.netlify.com/sites/liga-app/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/aa6a48e4-ad21-4bb1-8038-16d0df4aecb2/deploy-status)](https://app.netlify.com/sites/harmonious-smakager-7b5a9b/deploys)
+
 
 # Getting Started with Create React App
 
