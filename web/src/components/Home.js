@@ -1,5 +1,5 @@
 import React from "react";
-import daologo from "../oo.png";
+// import daologo from "../oo.png";
 import { Link } from "react-router-dom";
 import ligaLogo from "../imgs/liga-logos_white.png"
 function Home() {
