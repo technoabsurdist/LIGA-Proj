@@ -1,0 +1,734 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,800;1,300;1,400&display=swap");
+@viewport {
+  width: device-width;
+  zoom: 1;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+body {
+  margin: 0;
+  padding: 0px;
+  background: #ffe9e9;
+  font-family: "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-y: scroll;
+}
+.altBackgroundColor {
+  background: #faf0e6;
+
+}
+.mainDash {
+  background: #faf0e6;
+}
+.landingImageDiv {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.landingImage {
+  height: 100px;
+}
+.landing {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f1f1f1; /* fallback for old browsers */
+  background: linear-gradient(-45deg, #494949, #454545, #1f1f1f, #1c1c1c); 
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.rowGen {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.width100{
+  width: 100%;
+}
+.centerDiv{ 
+display: flex;
+justify-content: center;
+}
+nav {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  height: 130px;
+  justify-content: center;
+}
+.landingsvgOut {
+  position: relative;
+  z-index: 0;
+  width: 25%;
+}
+.landingText {
+  color: white;
+  z-index: 1000;
+  font-size: 15pt;
+  margin: 0px;
+  font-weight: 200;
+  margin-top: 20px;
+}
+.aboutSection {
+  width: 100%;
+  z-index: 999;
+}
+
+.cardOut {
+  margin: 20px 15%;
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.card {
+  width: 27.3%;
+  background-color: #999999;
+  border-radius: 9px;
+  margin: 0px 3%;
+  margin-top: -90px;
+  z-index: 999;
+  box-shadow: 0 4px 8px 0 rgba(82, 82, 82, 0.2),
+    0 6px 20px 0 rgba(82, 82, 82, 0.2);
+}
+.cardIn {
+  padding: 10% 5%;
+  width: 90%;
+}
+
+.cardTitle {
+  color: white;
+  font-weight: 500;
+  margin: 0px;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.cardText {
+  color: white;
+  font-weight: 500;
+  margin: 0px;
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 100px;
+  align-items: center;
+}
+
+#fade div {
+  margin-top: 5px;
+  font-size: 21px;
+  text-align: center;
+
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+  -ms-animation: fadein 2s; /* Internet Explorer */
+  -o-animation: fadein 2s; /* Opera < 12.1 */
+  animation: fadein 2s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.linkDiv {
+  display: flex;
+  flex-direction: row;
+}
+
+.popup {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 199;
+}
+.popupBackground {
+  background-color: #2a00013b;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 200;
+  margin: 0px;
+  padding: 0px;
+}
+.innerPersonPopup {
+  z-index: 220;
+  background: #faf0e6;
+  width: 50%;
+  height: auto;
+  margin: 15vh 25%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.innerPersonInnerPopup {
+  position: relative;
+  width: 86%;
+  margin: 0px 7%;
+  padding: 30px 0px;
+  padding-bottom: 100px;
+  overflow-y: scroll;
+}
+.innerPopup {
+  z-index: 220;
+  background: #2a2a2a;
+  width: 50%;
+  height: 50vh;
+  margin: 25vh 25%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.innerInnerPopup {
+  position: relative;
+  width: 80%;
+  margin: 0px 10%;
+  padding: 20px 0px;
+  overflow-y: scroll;
+}
+
+.popupTitle {
+  font-size: 24px;
+  color: white;
+  margin-bottom: 0px;
+}
+.popupTitlePerson {
+  font-size: 28px;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+.popupRowLeft {
+  width: 62%;
+  margin-right: 1%;
+}
+.popupRowRight {
+  width: 35%;
+  margin-left: 2%;
+}
+.whiteText {
+  color: white;
+}
+.regLink {
+  text-decoration: none;
+  color: #9c9c9c;
+  border-bottom: solid 1px #e7d5d5;
+  transition: all 0.6s;
+}
+.maroonLink {
+  text-decoration: none;
+  color: #252525;
+  border-bottom: solid 1px #242424;
+  transition: all 0.6s;
+}
+.regLinkNoBorder {
+  text-decoration: none;
+  color: white;
+}
+
+.regLink:hover {
+  opacity: 0.5;
+}
+.maroonLink:hover {
+  opacity: 0.5;
+}
+.closePopup {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.closePopupText {
+  margin: 0px;
+  padding: 0px;
+  color: white;
+  font-size: 20px;
+}
+.topMargin10{
+  margin-top: 10px;
+}
+.topMargin5{
+  margin-top: 5px;
+}
+.bottomMargin{
+  margin-bottom: 5px;
+
+}
+.optionalDiv{
+  padding: 20px;
+  border: white 1px solid;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+  text-align: center;
+  border-radius: 3px;
+}
+.input{
+  border-radius: 5px;
+  border: none;
+  padding: 6px 4px;
+  width: 160px;
+}
+.button{
+  margin-top: 10px;
+  border: white 1px solid;
+  background: transparent;
+  color: white;
+  transition: all 0.6s;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 7px 10px;
+  margin-bottom: 15px;
+  font-size: 12px;
+}
+.button:hover{
+  background: white;
+  color: rgb(39, 39, 39);
+}
+.hover{
+  transition: all 0.4s;
+}
+.hover:hover{
+  opacity: 0.5;
+}
+.closePopupPersonText {
+  margin: 0px;
+  padding: 0px;
+  color: rgb(50, 50, 50);
+  font-size: 20px;
+}
+.noMargin{
+  margin: 0px;
+  padding: 0px;
+}
+
+.popupLink {
+  color: white;
+  font-size: 15px;
+  padding: 0px 4px;
+  cursor: pointer;
+  text-decoration: none;
+
+}
+.genTitle{
+  font-size: 20px;
+}
+
+.dashboardTitleDiv {
+  width: 80%;
+  margin: 0px 10%;
+  text-align: center;
+}
+.dashboardMainTitle {
+  margin: 0px;
+  color: black;
+  margin-top: 10px;
+  font-size: 30pt;
+  font-weight: 100;
+}
+.dashboardMainSubTitle {
+  margin: 0px;
+  margin-top: 10px;
+  color: black;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  font-size: 12pt;
+}
+.tableDiv {
+  color: black;
+  width: 100%;
+}
+table {
+  border-spacing: 1;
+  border-collapse: collapse;
+  border-radius: 15px;
+  margin:0 auto;
+}
+
+thead tr {
+  height: 60px;
+  background: #303030;
+  font-size: 13px;
+  margin:0px;
+  padding: 0px;
+}
+th{
+  font-weight: 400;
+  color: white;
+  text-align: center;
+
+}
+
+tbody tr {
+  height: 48px;
+  border-bottom: 1px solid #5c5c5c31;
+}
+
+td {
+  text-align: left;
+  padding: 9px 2px;
+}
+.tagDiv {
+  width: auto;
+  background-color: white;
+  border-radius: 30px;
+  font-size: 10px;
+  color: #3a3a3a;
+  padding: 5px 7px;
+}
+.blackText {
+  color: black;
+}
+.schoolImg {
+  width: 27px;
+  border-radius: 50%;
+  margin: 0px 3px;
+  cursor: pointer; /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+.affDiv {
+  display: flex;
+  flex-direction: row;
+}
+.smallTitleText {
+  font-size: 11px;
+}
+.popupModal {
+  background: #888888; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #828282,
+    rgb(61, 61, 61)
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #636363,
+    rgb(60, 60, 60)
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  border-radius: 15px;
+  font-size: 11px;
+  padding: 3px 9px;
+  margin: 2px 2px;
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.124), 0 2px 5px 0 rgba(0, 0, 0, 0.159);
+}
+.popupModal2 {
+  background: #f8e9e9; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #939393,
+    #cacaca
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #f8e9e9,
+    #fcf4f4
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  border-radius: 5px;
+  font-size: 11px;
+  padding: 3px 9px;
+  margin: 2px 2px;
+  color: #373737;
+  font-weight: 600;
+  box-shadow: 0 1px 2px 0 rgba(92, 5, 5, 0.07), 0 2px 5px 0 rgba(92, 5, 5, 0.07);
+}
+.modalOuterDiv {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.infoImg {
+  width: 50%;
+  margin: 0px 25%;
+  cursor: pointer;
+  transition: all 0.6s;
+}
+.infoImg:hover {
+  opacity: 0.6;
+}
+.centerCell {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.resumeButton {
+  width: 70%;
+  margin-right: 15%;
+  margin-left: 15%;
+  border: white 2px solid;
+  border-radius: 20px;
+  padding: 20px 0px;
+  text-align: center;
+  transition: all 0.6s;
+  cursor: pointer;
+}
+.resumeButtonLink {
+  text-decoration: none;
+  color: white;
+  transition: all 0.6s;
+}
+.resumeButton:hover {
+  background: white;
+}
+
+.resumeButton:hover > .resumeButtonLink {
+  color: rgb(67, 67, 67);
+}
+.smallText {
+  font-size: 13px;
+}
+.popupGeneralLink {
+  text-decoration: none;
+  color: #383838;
+  font-size: 15px;
+  transition: all 0.6s;
+}
+.popupGeneralLink:hover {
+  opacity: 0.6;
+}
+.blackText {
+  color: #1f1f1f;
+}
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  transition: all 0.2s;
+  visibility: hidden;
+  opacity: 0;
+  width: 140px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+  bottom: 120%;
+  left: 50%;
+  margin-left: -70px;
+}
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+.toolDiv{
+  width: 100%;
+}
+.mainSubPage{
+  width: 70%;
+  margin: 0px 15%;
+  
+}
+.topBar{
+  width: 100%;
+  margin-top: 70px;
+}
+
+.topBarText{
+  margin-top: 0px;
+  font-size: 37px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+.leftCol70{
+  width:66%;
+  margin-right: 4%;
+}
+.rightCol30{
+  width:28%;
+  margin-left: 2%;
+}
+.leftCol60{
+  width:56%;
+  margin-right: 4%;
+}
+.rightCol40{
+  width:38%;
+  margin-left: 2%;
+}
+.leftCol50{
+  width:47%;
+  padding-right:3%;
+  align-items: flex-end;
+  justify-content: center;
+
+}  
+
+.rightCol50{
+  width:47%;
+  padding-left: 3%;
+  justify-content: center;
+  align-items: flex-start;
+}
+.flexCol{
+  display: flex;
+  flex-direction: column;
+}
+.centerCol{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.mobileView{
+  display: none;
+  margin: 0px;
+}
+@media screen and (max-width: 960px) {
+
+  .innerPersonPopup {
+    width: 94%;
+    height: 90vh;
+    margin: 5vh 3%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  .infoImg {
+    width: 90%;
+    margin: 0px 5%;
+    cursor: pointer;
+    transition: all 0.6s;
+  }
+}
+@media screen and (max-width: 800px) {
+  .innerPopup {
+    width: 94%;
+    height: 90vh;
+    margin: 5vh 3%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  .rowGen {
+    flex-direction: column;
+  }
+  .rightCol50,
+  .leftCol50,
+  .rightCol40,
+  .leftCol60,
+  .rightCol30,
+  .leftCol70 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    align-items: center;
+    padding: 0px;
+    flex-direction: column;
+    text-align: center;
+  }
+  .mobileView{
+    display:block;
+  }
+
+}
+
+
+.makeStyles-select-5::before {
+	border-color: #282828 !important;
+}
+
+.toolDiv {
+  color:rgb(39, 39, 39) !important; 
+}
