@@ -2,6 +2,9 @@ import React from "react";
 // import daologo from "../oo.png";
 import { Link } from "react-router-dom";
 import ligaLogo from "../imgs/liga-logos_white.png"
+import sheet from "../server-forms.js" 
+
+
 function Home() {
   return (
     <div className="main">
@@ -15,27 +18,16 @@ function Home() {
               <span className="hover">[About]</span>
             </Link>
           </div>
-
+          <p> 
+          
+          </p> 
           <div>
-            {/* <p className="popupLink">
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://forms.gle/yzkUG3K3QhYVfR646"
-                className="regLinkNoBorder"
-              >
-                [Request Talent]
-              </a>
-            </p> */}
             <Link to="/auth" className="popupLink">
               <span className="hover">[Talent Network]</span>
             </Link>
           </div>
         </div>
       </div>
-      {/* <div className="landing" id="fade">
-        <div style={{ zIndex: 10, position: "relative" }}></div>
-      </div> */}
     </div>
   );
 }
