@@ -361,7 +361,7 @@ const Dashboard = () => {
             <span className="hover">[About]</span>
           </Link>{" "}
         </div>
-        <p className="dashboardMainTitle">(RSO Name) Dashboard</p>
+        <p className="dashboardMainTitle">Blockchain at Chicago Dashboard</p>
         <i className="dashboardMainSubTitle">Powered by LIGA</i>
         <p className="mobileView">
           <b className="noMargin">
