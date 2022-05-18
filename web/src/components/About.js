@@ -44,6 +44,8 @@ function About(props) {
                   <a href="https://forms.gle/e2CjL33UTqjCW1cQ6">[Create Talent Network for RSO]</a> 
                     <br /> 
                   <a href="mailto: andere@uchicago.edu">[Email us]</a>
+                    <br /> 
+                  <a href="https://www.loom.com/share/1d8931bceb774823a91b77e603284d80">[Demo]</a>
                 </p> 
               </p>
             </div>

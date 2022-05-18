@@ -26,7 +26,8 @@ const Auth = ({ authenticate }) => {
     axios({
       method: "get",
       url:
-        "https://ivonb4slv2.execute-api.us-east-1.amazonaws.com/default/pw?pw=" +
+        "https://7oa3sx7syi.execute-api.us-east-1.amazonaws.com/default/pw" + 
+        // "https://ivonb4slv2.execute-api.us-east-1.amazonaws.com/default/pw?pw=" +
         pwInput +
         "&name=" +
         nameInput +
@@ -49,7 +50,7 @@ const Auth = ({ authenticate }) => {
         }
       })
       .catch((error) => {
-        console.log(error);
+        console.log("Error" + error);
       });
   };
 
