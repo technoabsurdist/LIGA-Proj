@@ -25,7 +25,7 @@ function About(props) {
               <br />
               <p className="bottomMargin">
                 <span className="genTitle">
-                  Solution
+                  The Solution
                 </span>
               </p>
               <p className="noMargin" style={{fontSize: "13px"}}>

@@ -3,11 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-const Auth = ({ authenticate }) => {
+const Auth = ({ authenticate, setOwner }) => {
   const [pwInput, setInput] = useState("");
-  const [nameInput ] = useState("");
-  const [emailInput ] = useState("");
-  const [entityInput ] = useState("");
 
   const [message, setMessage] = useState("Enter your password below");
 
@@ -15,6 +12,7 @@ const Auth = ({ authenticate }) => {
 
   //auth button handler
   const onClick = () => {
+
     const headers = {
       "x-api-key": "LPyXKkSkv53MyAKdwfc5q7i6figQHpa56xHBViEz",
     };
@@ -26,24 +24,17 @@ const Auth = ({ authenticate }) => {
     axios({
       method: "get",
       url:
-        "https://7oa3sx7syi.execute-api.us-east-1.amazonaws.com/default/pw" + 
-        // "https://ivonb4slv2.execute-api.us-east-1.amazonaws.com/default/pw?pw=" +
-        pwInput +
-        "&name=" +
-        nameInput +
-        "&email=" +
-        emailInput +
-        "&entity=" +
-        entityInput,
+        "https://7oa3sx7syi.execute-api.us-east-1.amazonaws.com/default/pw?pw=" + 
+        pwInput,
       headers: headers,
     })
       .then((response) => {
         console.log(response.data);
 
-        if (response.data === 1) {
+        if (response.data[0] === 1) {
           setMessage("Loading...");
-
-          authenticate(response.data);
+          setOwner(response.data[1]);
+          authenticate(response.data[0]);
           navigate("dashboard");
         } else {
           setMessage("Incorrect Password");

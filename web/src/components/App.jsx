@@ -9,6 +9,12 @@ import Home from "./Home";
 
 const App = () => {
   const [auth, setAuth] = useState(false);
+  const [cuurenOwner, setCurrentOwner] = useState("no owner");
+  
+  const changeOwner = (newOwner) => {
+    setCurrentOwner(newOwner);
+
+  }
   useEffect(() => {
     localStorage.setItem("user", auth);
   }, [auth]);
@@ -24,14 +30,14 @@ const App = () => {
           <Route
             path="/auth"
             element={
-              <Auth authenticate={(val) => setAuth(val === 1 ? true : false)} />
+              <Auth setOwner={changeOwner} authenticate={(val) => setAuth(val === 1 ? true : false)} />
             }
           />
         )}
 
         {auth && (
           <>
-            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/dashboard" element={<Dashboard owner={cuurenOwner}/>} />
           </>
         )}
         <Route

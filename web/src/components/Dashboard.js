@@ -5,6 +5,7 @@ import harris from "../imgs/harris.jpg";
 import undergrad from "../imgs/undergrad.jpg";
 import midway from "../imgs/midway.png";
 import law from "../imgs/law.png";
+import liga from "../imgs/liga-logos_white.png"
 import dao from "../imgs/dao.png";
 import ssd from "../imgs/ssd.jpg";
 import boothchain from "../imgs/boothchain.png";
@@ -15,66 +16,57 @@ import Selector from "./Selector";
 import { CSVLink } from "react-csv";
 // import "./Dashboard.css";
 
-const Dashboard = () => {
+const type = [
+  "Generalist",
+  "Product Manager",
+  "Business Development", 
+  "Science and Engineering", 
+  "Legal & Regulatory", 
+  "Trading", 
+  "Analyst", 
+  "Technical writing", 
+  "Software Engineering --frontend", 
+  "Software Engineering --backend", 
+  "Software Engineering --other", 
+  "Data Science", 
+  "Marketing", 
+  "Communications / Content Creation"
+]; 
+
+const affiliations = [
+  "Chemistry Society", 
+  "Chicago Economics Forum", 
+  "OEconomica", 
+  "UCBG", 
+  "Engineering Society", 
+  "Derivatives Group", 
+  "CS Student Activities Council", 
+  "AKPsi", 
+  "CompileHer"
+]; 
+
+const work_type = [
+  "Full-time post-grad",
+  "Summer internship",
+  "Part-time internship",
+]
+
+const exp_level = [
+  "Just getting started and ready to learn!", 
+  "Strong experience (6 - 12 months)", 
+  "Extremely experienced --have developed various projects (1yr+)", 
+]; 
+
+const Dashboard = (props) => {
   const [rawData, setRawData] = useState([]);
   const [displayedData, setDisplayedData] = useState([]);
   const [popupOpen, setPopup] = useState(false);
   const [popupPerson, setPopupPerson] = useState({});
   const [selections, setSelections] = useState({
-    builder_type: [
-      "Generalist",
-      "Founder",
-      "Product Management",
-      "SWE - frontend",
-      "SWE - -backend",
-      "SWE - smart contracts",
-      "Product Design + UI/UX",
-      "Data Science/Analytics",
-      "Market Research/Sourcing",
-      "Tokenomics/Governance",
-      "Business Operations",
-      "Communications/Marketing",
-      "Legal & Regulatory",
-      "Quant Trading",
-      "Technical Writing",
-    ],
-    web3_subfields: [
-      "Web3 Core protocol/blockchain layer",
-      "General Web3 Infrastructure/tooling",
-      "General Web3 B2C applications",
-      "General Web3 B2B applications",
-      "DeFi protocols/exchanges",
-      "Crypto trading/quant",
-      "DAOs",
-      "DAO tooling",
-      "NFT collections/exchanges",
-      "NFT tooling",
-      "Venture Capital",
-    ],
-    work_type: [
-      "Full-time post-grad",
-      "Summer internship",
-      "Part-time internship",
-    ],
-    school: [
-      "Undergraduate",
-      "Booth School of Business",
-      "Law School",
-      "Social Sciences Division",
-      "Harris School of Public Policy",
-    ],
-    affiliation: [
-      "Boothchain",
-      "Blockchain Chicago",
-      "ChicagoDAO Core Team",
-      "Midway Ventures",
-      "None",
-    ],
-    exp_level_raw: [
-      "Just getting started & ready to learn!",
-      "Strong understanding of the ecosystem, have been following the space closely (6-12 months)",
-      "Have prior work/project experience in the blockchain space (1yr+)",
-    ],
+    builder_type: type,  
+    affiliations: affiliations, 
+    work_type: work_type, 
+    exp_level_raw: exp_level, 
   });
 
   // const [loading, setLoading] = useState(true);
@@ -152,7 +144,7 @@ const Dashboard = () => {
 
       axios({
         method: "get",
-        url: "https://dfx9l7qckf.execute-api.us-east-1.amazonaws.com/default/getResumes",
+        url: "https://dfx9l7qckf.execute-api.us-east-1.amazonaws.com/default/getResumes?owner=" + props.owner,
         headers: headers,
       })
         .then((response) => {
@@ -208,13 +200,38 @@ const Dashboard = () => {
               if (tempArr[j] === "Midway Ventures") {
                 tempAff.push(midway);
               }
+              // All TEMP because I don't want to look for logos
+              if (tempArr[i] === "Chemistry Society") {
+                tempAff.push(liga); 
+              }
+              if (tempArr[i] === "Chicago Economics Forum") {
+                tempAff.push(liga); 
+              }
+              if (tempArr[i] === "OEconomica") {
+                tempAff.push(liga); 
+              }
+              if (tempArr[i] === "UCBG") {
+                tempAff.push(liga); 
+              }
+              if (tempArr[i] === "Engineering Society") {
+                tempAff.push(liga); 
+              }
+              if (tempArr[i] === "Derivatives Group") {
+                tempAff.push(liga); 
+              }
+              if (tempArr[i] === "CS Student Activities Council") {
+                tempAff.push(liga); 
+              }
+              if (tempArr[i] === "AKPsi") {
+                tempAff.push(liga)
+              }
+              if (tempArr[i] === "CompileHer") {
+                tempAff.push(liga); 
+              }
             }
             out[i]["affiliation_path"] = tempAff;
           }
 
-          // array.sort(function(a, b) {
-          //   return a.age - b.age;
-          // });
           out = out.sort(alphaSort("name"));
 
           setRawData(out);
@@ -352,6 +369,7 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
+      {props.owner}
       <div className="dashboardTitleDiv">
         <div className="row width100 centerDiv" style={{ marginTop: "60px" }}>
           <Link to="/" className="popupLink" style={{ color: "black" }}>
@@ -361,7 +379,7 @@ const Dashboard = () => {
             <span className="hover">[About]</span>
           </Link>{" "}
         </div>
-        <p className="dashboardMainTitle">Blockchain at Chicago Dashboard</p>
+        <p className="dashboardMainTitle">(RSO Name Placeholder) Dashboard</p>
         <i className="dashboardMainSubTitle">Powered by LIGA</i>
         <p className="mobileView">
           <b className="noMargin">
@@ -372,37 +390,21 @@ const Dashboard = () => {
         </p>
         <br /> <br /> <br />
         <i>Use the dropdown selectors below to filter by attributes.</i>
+        <br /> 
         <div className="toolDiv">
           <Selector
-            options={[
-              "Business Operations",
-              "Software Engineering",
-              "Legal",
-              "Marketing",
-              "Generalist",
-              "Founder",
-              "Product Management",
-              "Business Development",
-              "Product Design + UI/UX",
-              "Communications/Marketing",
-              "Quant Trading",
-              "Technical Writing",
-            ]}
+            options={type}
             title={"Tags"}
             internalTitle={"builder_type"}
             setVal={updateCurrentSelections}
           />
           <Selector
-            options={[
-              "Just getting started & ready to learn!",
-              "Strong experience (6-12 months)",
-              "Extremely experienced --have developed various projects (1yr+)",
-            ]}
+            options={exp_level}
             title={"Experience"}
             internalTitle={"exp_level_raw"}
             setVal={updateCurrentSelections}
           />
-          <Selector
+          {/* <Selector
             options={[
               "The College",
               "Booth School of Business",
@@ -413,8 +415,8 @@ const Dashboard = () => {
             title={"School"}
             internalTitle={"school"}
             setVal={updateCurrentSelections}
-          />
-          <Selector
+          /> */}
+          {/* <Selector
             options={[
               "Asian Policy Forum",
               "Chemistry Society",
@@ -429,13 +431,9 @@ const Dashboard = () => {
             title={"Organization Affiliation"}
             internalTitle={"affiliation"}
             setVal={updateCurrentSelections}
-          />
+          /> */}
           <Selector
-            options={[
-              "Full-time post-grad",
-              "Summer internship",
-              "Part-time internship",
-            ]}
+            options={work_type}
             title={"Type of work desired"}
             internalTitle={"work_type"}
             setVal={updateCurrentSelections}
@@ -450,6 +448,7 @@ const Dashboard = () => {
         >
           [Download raw csv]
         </CSVLink>
+
         <br /> <br />
         <div style={{ width: "100%", textAlign: "left" }}>
           <i style={{ fontSize: "10px", marginLeft: "4px" }}>
