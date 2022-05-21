@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import ligaLogo from "../imgs/liga-logos_white.png"
 // import sheet from "../server-forms.js" 
 
-
 function Home() {
   return (
     <div className="main">

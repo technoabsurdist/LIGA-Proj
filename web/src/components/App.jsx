@@ -9,7 +9,7 @@ import Home from "./Home";
 
 const App = () => {
   const [auth, setAuth] = useState(false);
-  const [cuurenOwner, setCurrentOwner] = useState("no owner");
+  const [currentOwner, setCurrentOwner] = useState("no owner");
   
   const changeOwner = (newOwner) => {
     setCurrentOwner(newOwner);
@@ -37,7 +37,7 @@ const App = () => {
 
         {auth && (
           <>
-            <Route path="/dashboard" element={<Dashboard owner={cuurenOwner}/>} />
+            <Route path="/dashboard" element={<Dashboard owner={currentOwner}/>} />
           </>
         )}
         <Route

@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import harris from "../imgs/harris.jpg";
+// import harris from "../imgs/harris.jpg";
 import undergrad from "../imgs/undergrad.jpg";
 import midway from "../imgs/midway.png";
-import law from "../imgs/law.png";
+// import law from "../imgs/law.png";
 import liga from "../imgs/liga-logos_white.png"
 import dao from "../imgs/dao.png";
-import ssd from "../imgs/ssd.jpg";
+// import ssd from "../imgs/ssd.jpg";
 import boothchain from "../imgs/boothchain.png";
-import booth from "../imgs/booth.png";
+// import booth from "../imgs/booth.png";
 import block from "../imgs/block.png";
 import info from "../imgs/info.png";
 import Selector from "./Selector";
@@ -151,22 +151,23 @@ const Dashboard = (props) => {
           var out = JSON.parse(JSON.stringify(response.data));
           for (var i = 0; i < out.length; i++) {
             //SCHOOL
-            if (out[i].school === "Undergraduate") {
-              out[i]["school_path"] = undergrad;
-            }
+            out[i]["school_path"] = undergrad; 
+            // if (out[i].school === "Undergraduate") {
+            //   out[i]["school_path"] = undergrad;
+            // }
 
-            if (out[i].school === "Law School") {
-              out[i]["school_path"] = law;
-            }
-            if (out[i].school === "Harris School of Public Policy") {
-              out[i]["school_path"] = harris;
-            }
-            if (out[i].school === "Booth School of Business") {
-              out[i]["school_path"] = booth;
-            }
-            if (out[i].school === "Social Sciences Division") {
-              out[i]["school_path"] = ssd;
-            }
+            // if (out[i].school === "Law School") {
+            //   out[i]["school_path"] = law;
+            // }
+            // if (out[i].school === "Harris School of Public Policy") {
+            //   out[i]["school_path"] = harris;
+            // }
+            // if (out[i].school === "Booth School of Business") {
+            //   out[i]["school_path"] = booth;
+            // }
+            // if (out[i].school === "Social Sciences Division") {
+            //   out[i]["school_path"] = ssd;
+            // }
 
             //BUILDER TYPE
 
@@ -369,7 +370,6 @@ const Dashboard = (props) => {
           </div>
         </div>
       </div>
-      {props.owner}
       <div className="dashboardTitleDiv">
         <div className="row width100 centerDiv" style={{ marginTop: "60px" }}>
           <Link to="/" className="popupLink" style={{ color: "black" }}>
@@ -379,7 +379,7 @@ const Dashboard = (props) => {
             <span className="hover">[About]</span>
           </Link>{" "}
         </div>
-        <p className="dashboardMainTitle">(RSO Name Placeholder) Dashboard</p>
+        <p className="dashboardMainTitle"><strong>{props.owner}</strong> Dashboard</p>
         <i className="dashboardMainSubTitle">Powered by LIGA</i>
         <p className="mobileView">
           <b className="noMargin">
@@ -466,20 +466,20 @@ const Dashboard = (props) => {
             <table style={{ width: "100%" }}>
               <thead>
                 <tr>
-                  <th>Name</th>
-                  <th>School</th>
-                  <th>Affiliation</th>
+                  <th><strong>Name</strong></th>
+                  <th><strong>School</strong></th>
+                  <th>           </th>
 
-                  <th>Short Description</th>
-                  <th>Experience</th>
-                  <th>More</th>
+                  <th><strong>Short Description</strong></th>
+                  <th><strong>Experience</strong></th>
+                  <th><strong>More</strong></th>
                 </tr>
               </thead>
               <tbody style={{ width: "100%" }}>
                 {displayedData.map((person, i) => {
                   return (
                     <tr key={i}>
-                      <td style={{ width: "20%" }} className="cell">
+                      <td style={{ width: "10%" }} className="cell">
                         {person.name}
                       </td>
                       <td style={{ width: "5%" }} className="cell ">
@@ -494,10 +494,10 @@ const Dashboard = (props) => {
                           </div>{" "}
                         </div>
                       </td>
-                      <td style={{ width: "10%" }} className="cell">
+                      <td style={{ width: "3%" }} className="cell">
                         <div className="centerCell">
                           <div className="affDiv">
-                            {person.affiliation_path.length === 0 ? (
+                            {/* {person.affiliation_path.length === 0 ? (
                               <i>None</i>
                             ) : (
                               person.affiliation_path.map((affiliation, i) => (
@@ -512,7 +512,7 @@ const Dashboard = (props) => {
                                   </span>
                                 </div>
                               ))
-                            )}
+                            )} */}
                           </div>
                         </div>
                       </td>
@@ -527,7 +527,7 @@ const Dashboard = (props) => {
                         {exp?.[parseInt(person.exp_level) - 1]}
                       </td>
                       <td
-                        style={{ width: "5%" }}
+                        style={{ width: "3%" }}
                         className="cell "
                         onClick={() => setPopupContent(true, person)}
                       >
