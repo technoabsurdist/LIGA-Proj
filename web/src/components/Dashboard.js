@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 // import harris from "../imgs/harris.jpg";
@@ -62,6 +62,7 @@ const Dashboard = (props) => {
   const [displayedData, setDisplayedData] = useState([]);
   const [popupOpen, setPopup] = useState(false);
   const [popupPerson, setPopupPerson] = useState({});
+  // const [owner, setOwner] = useState(""); 
   const [selections, setSelections] = useState({
     builder_type: type,  
     affiliations: affiliations, 

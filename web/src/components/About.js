@@ -22,7 +22,6 @@ function About(props) {
               <p className="noMargin" style={{fontSize: "13px"}}>
               LIGA spurred from the need at UChicago to have a portal that directly connects recruiters to specific RSOs (Recognized Student Organizations). In its current state, UChicago has many “elite” RSOs which have direct “informal” connections with employers that serve as a fundamental pipeline between the members and the employers. Unfortunately, in its current state, this pipeline is restricted to the top 1% of RSOs (evaluating by acceptance rates and popularity). Groups that have been around for years and have secured funding from the university and external resources, such as Eckhart, Blue Chips, AKPsi, and Maroon Capital. But what if we could give an easy way of establishing a career pipeline to any RSO on campus? This is exactly where LIGA comes into play. 
               </p>
-              {/* <br /> */}
               <p className="bottomMargin">
                 <span className="genTitle">
                   The Solution
