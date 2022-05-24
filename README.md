@@ -12,6 +12,8 @@ Imagine a future where the recently established UChicago space RSO can connect w
 [![Netlify Status](https://api.netlify.com/api/v1/badges/aa6a48e4-ad21-4bb1-8038-16d0df4aecb2/deploy-status)](https://app.netlify.com/sites/harmonious-smakager-7b5a9b/deploys)
 
 
+<img width="1429" alt="Screen Shot 2022-05-21 at 02 06 30" src="https://user-images.githubusercontent.com/92827957/169640220-119d6cbe-0907-46a0-b785-4bb4d9b43e26.png">
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -82,6 +84,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-<img width="1429" alt="Screen Shot 2022-05-21 at 02 06 30" src="https://user-images.githubusercontent.com/92827957/169640220-119d6cbe-0907-46a0-b785-4bb4d9b43e26.png">
 
